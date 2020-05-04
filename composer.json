@@ -1,21 +1,36 @@
 {
-    "name": "padrio/php-electrum-api",
-    "description": "PHP wrapper for Electrum JSONRPC-API",
-    "type": "library",
-	"keywords": ["electrum", "bitcoin", "payment", "jsonrpc", "api"],
-    "license": "GPL-3.0",
-    "authors": [
-        {
-            "name": "Pascal Krason",
-            "email": "p.krason@padr.io"
-        }
-    ],
-    "require": {
-        "zendframework/zend-hydrator": "^2.2"
+  "name": "sonofliberty/php-electron-cash-slp-api",
+  "description": "PHP wrapper for Electron Cash SLP JSONRPC-API",
+  "type": "library",
+  "keywords": [
+    "electroncash",
+    "bitcoincash",
+    "slp",
+    "payment",
+    "jsonrpc",
+    "api"
+  ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Pascal Krason",
+      "email": "p.krason@padr.io"
     },
-	"autoload": {
-		"psr-4": {
-			"Electrum\\": "src"
-		}
-	}
+    {
+      "name": "epoxa",
+      "email": "epoxa@vvproject.ru"
+    },
+    {
+      "name": "Alex Winter",
+      "email": "hi@alexwinter.me"
+    }
+  ],
+  "require": {
+    "zendframework/zend-hydrator": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Electrum\\": "src"
+    }
+  }
 }

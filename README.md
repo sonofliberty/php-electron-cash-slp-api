@@ -1,3 +1,6 @@
+![Packagist](https://img.shields.io/packagist/dt/padrio/php-electrum-api.svg?color=%234c1)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/padrio/php-electrum-api.svg?color=%234c1)
+
 # php-electrum-api - Electrum library
 ```
 Licence: GPL-3.0
@@ -10,7 +13,9 @@ Please note, this library is by far not completed and but can be used in product
 First you need to setup a new Electrum wallet. Follow the instructions according to your OS at the [Electrum Download Page](https://electrum.org/#download). After the successfull installation you need to set a rpcport by typing:
 ```
 electrum setconfig rpcport 7777
-``` 
+electrum setconfig rpcuser "username"
+electrum setconfig rpcpassword "password"
+```
 Then we can create a default wallet, dont forget to note your generated seed, it's nescessary if you want to recover it one day:
 ```
 electrum create
@@ -58,7 +63,7 @@ $response->getVersion();
 ## Custom Client Configuration
 Every Request/Method takes a `Electrum\Client`-instance as parameter which replaces the default one. A custom instance can be usefull if you want to set custom config params like another Hostname or Port.
 ```php
-$client = new \Electrum\Client('http://127.0.0.1', 7777);
+$client = new \Electrum\Client('http://127.0.0.1', 7777, 0, 'username', 'password');
 $method = new \Electrum\Request\Method\Version($client);
 
 try {
